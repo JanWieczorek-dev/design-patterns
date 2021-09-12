@@ -18,7 +18,7 @@ public abstract class SongComponent {
         throw new UnsupportedOperationException();
     }
 
-    public String getReleaseYear(){
+    public int getReleaseYear(){
         throw new UnsupportedOperationException();
     }
 

@@ -1,6 +1,7 @@
 package com.wieczorek.jan.composite.pattern;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class SongGroup extends SongComponent{
 
@@ -32,5 +33,17 @@ public class SongGroup extends SongComponent{
 
     public SongComponent getSongComponent(int componentIndex) {
         return (SongComponent)songComponents.get(componentIndex);
+    }
+
+
+    public void displaySongInfo(){
+        System.out.println(this.getGroupName() + " "+ this.getGroupDescription());
+
+        Iterator songIterator = songComponents.iterator();
+
+        while(songIterator.hasNext()){
+            SongComponent songInfo = (SongComponent) songIterator.next();
+            songInfo.displaySongInfo();
+        }
     }
 }
