@@ -6,7 +6,7 @@ public class StockObserver implements Observer{
     private double ibmPrice;
     private double googlePrice;
 
-    private static int observrIdTracker = 0;
+    private static int observerIdTracker = 0;
 
     private int observerID;
 
@@ -23,7 +23,7 @@ public class StockObserver implements Observer{
     }
 
     public StockObserver(int observerID, Subject stockGrabber) {
-        this.observerID = ++ observerID;
+        this.observerID = ++ observerIdTracker;
         this.stockGrabber = stockGrabber;
         System.out.println("New observer: " + this.observerID);
         stockGrabber.registerObserver(this);

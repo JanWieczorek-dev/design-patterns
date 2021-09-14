@@ -21,8 +21,8 @@ public class StockGrabber implements Subject{
     }
 
     @Override
-    public void unregisterObserver(Observer observer) {
-        int observerToDeleteIndex = this.observers.indexOf(observer);
+    public void unregisterObserver(Observer observerToBeDeleted) {
+        int observerToDeleteIndex = this.observers.indexOf(observerToBeDeleted);
         System.out.println("Observer " + (observerToDeleteIndex + 1) + " deleted");
         this.observers.remove(observerToDeleteIndex);
 
